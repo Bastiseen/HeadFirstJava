@@ -1,3 +1,3 @@
-# HeadFistJava
+# HeadFirstJava
 
-Exercises of the book
+Code of the exercises of the book
