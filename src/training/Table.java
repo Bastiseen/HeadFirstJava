@@ -1,9 +1,6 @@
 package training;
 
-import java.util.ArrayList;
-
 import javafx.application.Application;
-import javafx.collections.ObservableList;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -119,7 +116,7 @@ public class Table extends Application
 
 	public static void main(String args[])
     {
-    Application.launch(args);
+		Application.launch(args);
     }
 }
 	
