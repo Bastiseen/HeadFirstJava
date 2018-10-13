@@ -1,4 +1,4 @@
-package bastiseen.headfirstjava;
+package headfirstjava;
 
 import java.io.File;
 import java.io.FileInputStream;
