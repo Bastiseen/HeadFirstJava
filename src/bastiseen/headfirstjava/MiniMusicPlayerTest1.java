@@ -1,4 +1,4 @@
-package headfirstjava;
+package bastiseen.headfirstjava;
 
 import javax.sound.midi.ControllerEventListener;
 import javax.sound.midi.MidiEvent;

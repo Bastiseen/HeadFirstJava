@@ -1,4 +1,4 @@
-package headfirstjava;
+package bastiseen.headfirstjava;
 import javax.sound.midi.MidiEvent;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Sequence;

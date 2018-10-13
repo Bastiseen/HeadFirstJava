@@ -1,4 +1,4 @@
-package headfirstjava;
+package bastiseen.headfirstjava;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -88,7 +88,11 @@ public class MiniMusicPlayer3 {
 
  class MyDrawPanel extends JPanel implements ControllerEventListener {
       
-      // only if we got an event do we want to paint
+      /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	// only if we got an event do we want to paint
       boolean msg = false;
 
       public void controlChange(ShortMessage event) {
@@ -96,7 +100,8 @@ public class MiniMusicPlayer3 {
          repaint();         
       }
 
-      public void paintComponent(Graphics g) {
+      @SuppressWarnings("unused")
+	public void paintComponent(Graphics g) {
        if (msg) {
             
          Graphics2D g2 = (Graphics2D) g;

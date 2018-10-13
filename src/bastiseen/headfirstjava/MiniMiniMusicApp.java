@@ -1,4 +1,4 @@
-package headfirstjava;
+package bastiseen.headfirstjava;
 import javax.sound.midi.*;
 
 public class MiniMiniMusicApp {
