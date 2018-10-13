@@ -1,4 +1,4 @@
-package training;
+package bastiseen.training;
 
 public enum PredictionStatus
 {

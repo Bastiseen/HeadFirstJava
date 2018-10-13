@@ -1,4 +1,4 @@
-package training;
+package bastiseen.training;
 
 public class PredictionStatusTest
 {

@@ -1,4 +1,4 @@
-package headfirstjava;
+package bastiseen.headfirstjava;
 import javafx.animation.*;
 import javafx.application.Application;
 import javafx.event.*;

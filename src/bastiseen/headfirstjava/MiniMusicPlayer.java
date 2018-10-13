@@ -1,6 +1,4 @@
-package headfirstjava;
-
-import javax.sound.midi.ControllerEventListener;
+package bastiseen.headfirstjava;
 import javax.sound.midi.MidiEvent;
 import javax.sound.midi.MidiSystem;
 import javax.sound.midi.Sequence;
@@ -10,28 +8,36 @@ import javax.sound.midi.Track;
 
 import javafx.application.Application;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-public class MiniMusicPlayerTest1 extends Application
+public class MiniMusicPlayer extends Application
 {	
-	static MyDrawScene ml;
-	Group root;
-	
+	private Scene scene;
+	private Pane root;
+	private Group rect;
+	private Button btnAddRectangle;
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception
 	{
 		// Setting the title to the stage
 		primaryStage.setTitle("My Fisrt Music Video");
-		root = new Group();
-		ml = new MyDrawScene(root, 300, 300);
-		primaryStage.setScene(ml);
-		primaryStage.show();
+		root = new Pane();
+		rect = new Group();
+		btnAddRectangle = new Button("Add a rectangle");
 		
+		root.getChildren().addAll(rect, btnAddRectangle);
+		
+		btnAddRectangle.setOnAction(event -> drawRectangle());
+		
+		scene = new Scene(root, 300, 300);
+		primaryStage.setScene(scene);
+		primaryStage.show();
 		
 		try
 		{
@@ -39,7 +45,11 @@ public class MiniMusicPlayerTest1 extends Application
 			sequencer.open();
 			
 			int[] controllers = {127};
-			sequencer.addControllerEventListener(ml, controllers);
+			sequencer.addControllerEventListener(event ->
+			{
+				System.out.println("la");
+				drawRectangle();
+			}, controllers);
 			
 			Sequence sequence = new Sequence(Sequence.PPQ,  4);
 			Track track = sequence.createTrack();
@@ -60,23 +70,9 @@ public class MiniMusicPlayerTest1 extends Application
 		}
 	}
 	
-	class MyDrawScene extends Scene implements ControllerEventListener
-	{
-		public MyDrawScene(Parent root, double width, double height) {
-			super(root, width, height);
-		}
-
-		@Override
-		public void controlChange(ShortMessage arg0)
-		{
-			System.out.println("la");
-			drawRectangle();
-		}
-		
-	}
-	
 	private void drawRectangle()
 	{
+		System.out.println("Drawing a rectangle");
 		Rectangle rectangle = new Rectangle(); 
 		double red = (Math.random());
 		double green = (Math.random());
@@ -113,6 +109,5 @@ public class MiniMusicPlayerTest1 extends Application
 		launch(args);
 	}
 }
-
 
 
