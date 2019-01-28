@@ -23,7 +23,6 @@ import javafx.stage.Stage;
 public class BeatBox extends Application
 {
 	private Scene scene;
-	
 	private BorderPane root;			// This is the background of the application
 	
 	private VBox vboxInstruments; 	// Container of instrument list
