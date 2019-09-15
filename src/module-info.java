@@ -1,5 +1,4 @@
-module BeatBoxDrumMachine
-{
+module HeadFirstJava {
 	exports bastiseen.training;
 	exports bastiseen.headfirstjava;
 

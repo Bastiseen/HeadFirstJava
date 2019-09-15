@@ -1,5 +1,6 @@
 package bastiseen.headfirstjava;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -7,7 +8,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-import javax.sound.midi.*;
+import javax.sound.midi.MidiEvent;
+import javax.sound.midi.MidiSystem;
+import javax.sound.midi.Sequence;
+import javax.sound.midi.Sequencer;
+import javax.sound.midi.ShortMessage;
+import javax.sound.midi.Track;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -23,7 +29,6 @@ import javafx.stage.Stage;
 public class BeatBox extends Application
 {
 	private Scene scene;
-	
 	private BorderPane root;			// This is the background of the application
 	
 	private VBox vboxInstruments; 	// Container of instrument list
